@@ -27,7 +27,7 @@ $(document).ready(function() {
     if (isNaN(parseFloat(monthlyPayment))) {
       var result = 'Please complete all boxes';
     } else {
-      var result = 'Your payments would be about $' + monthlyPayment + ' a month.';
+      var result = 'Monthly Payments: <strong>$' + monthlyPayment + '</strong><br> Total Interest Paid: <strong>$' + ((monthlyPayment * totalPayments) - principle).toFixed(2) + '</strong><br> Total Amount Paid: <strong>$' + (monthlyPayment * totalPayments).toFixed(2) + '</strong>';
     }
 
     $('#display-calculation').html(result);
